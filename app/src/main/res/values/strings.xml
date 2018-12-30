@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">LatinLearner</string>
+
+    <string name="main_menu_title">Latin Learner</string>
+    <string name="main_menu_description">Assistant to Wheelock\'s Latin</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="about_settings">About this app</string>
+    <string name="button_dictionary">Dictionary</string>
+    <string name="button_vocabulary">Vocabulary Practice</string>
+    <string name="button_conjdecl">Conjugations and Declensions</string>
+    <string name="title_activity_vocabulary_selection">VocabularySelection</string>
+    <string name="about">About this app</string>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="chapter_selection">Select a chapter…</string>
+    <string name="declension_selection">Select an exercise…</string>
+
+    <string name="title_activity_vocabulary_quiz">VocabularyQuizActivity</string>
+    <string name="vocab_quiz_hint">Enter the translation…</string>
+    <string name="vocab_quiz_result">Results</string>
+    <string name="vocab_quiz_continue">Return</string>
+    <string name="vocab_quiz_missed_words">Scrub missed so many words:</string>
+    <string name="vocab_quiz_study_missed_words">Study Missed Terms</string>
+    <string name="title_activity_declension_quiz">DeclensionQuizActivity</string>
+
+
+    <string name="declSgNom">Sg. Nominative</string>
+    <string name="declSgGen">Sg. Genitive</string>
+    <string name="declSgDat">Sg. Dative</string>
+    <string name="declSgAcc">Sg. Accusative</string>
+    <string name="declSgAbl">Sg. Ablative</string>
+    <string name="declPlNom">Pl. Nominative</string>
+    <string name="declPlGen">Pl. Genitive</string>
+    <string name="declPlDat">Pl. Dative</string>
+    <string name="declPlAbl">Pl. Ablative</string>
+    <string name="declPlAcc">Pl. Accusative</string>
+
+    <string name="title_activity_conjugation_quiz">ConjugationQuizActivity</string>
+    <string name="conjSg1st">1st Person Sg.</string>
+    <string name="conjSg2nd">2nd Person Sg.</string>
+    <string name="conjSg3rd">3rd Person Sg.</string>
+    <string name="conjPl1st">1st Person Pl.</string>
+    <string name="conjPl2nd">2nd Person Pl.</string>
+    <string name="conjPl3rd">3rd Person Pl.</string>
+
+    <string name="toEnglish">to English</string>
+    <string name="toLatin">to Latin</string>
+    <string name="dicthint">Enter a term…</string>
+
+    <string name="englishRadioFunction">onEnglishRadioClicked</string>
+
+    <string name="giveup">Give up</string>
+    <string name="title_activity_dictionary">DictionaryActivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_about">AboutActivity</string>
+
+</resources>

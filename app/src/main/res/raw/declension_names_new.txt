@@ -1,0 +1,42 @@
+﻿
+1  1  1st/2nd Conjugation: Present Indicative-v
+2  1  1st Declension (Feminine)
+3  2  2nd Declension Masculine
+4  2  Sum: Present Indicative-v
+4  3  2nd Declension Neuter
+5  3  1st/2nd Conjugation: Future/Imperfect-v
+6  4  Sum: Future/Imperfect, Possum-v
+7  4  3rd Declension
+8  5  3rd Conjugation-v
+9  5  Demonstratives Ille/Iste, Hic
+9  6  Special -īus Adjectives
+10 6  4th Conjugation and -iō Verbs-v
+11 7  Personal Pronouns Ego, Tū
+11 8  Demonstrative Pronouns Is, Ea, Id
+11 9  Demonstrative Īdem, Eadem, Idem
+12 7  Perfect Active System-v
+13 10 Reflexive Pronouns
+13 11 Intensive Pronouns
+14 12 3rd Declension i-stems
+16 13 3rd Declension Adjectives
+17 14 Relative Pronouns/Interrogative Adjectives
+18 8  1st/2nd Conjugations: Passive Present-v
+19 8  Perfect Passive System
+19 15 Interrogative Pronouns
+20 16 4th Declension
+21 9  3rd/4th Conjugations: Passive Present-v
+22 17 5th Declension
+23 18 Present Active Participle
+26 19 Comparatives
+27 20 The Irregular Plūs
+28 10 All Conjugations: Present Subjunctive-v
+29 11 All Conjugations: Imperfect Subjunctive-v
+29 12 Sum and Possum: Present/Imperfect Subjunctive-v
+30 13 All Conjugations: Perfect/Pluperfect Subjunctive-v
+31 14 Ferō: Present Indicative Active/Passive-v
+32 15 Volō: Present Indicative, Present/Imperfect Subjunctive-v
+32 16 Nōlō/Mālō: Present Indicative-v
+34 17 Deponent Verbs-v
+36 18 Fiō: Irregular-v
+37 19 Eō: Irregular-v
+39 21 Gerund

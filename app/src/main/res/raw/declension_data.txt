@@ -1,0 +1,44 @@
+﻿
+
+1 nauta nautae nautae nautam nautā nautae nautārum nautīs nautās nautīs
+
+1 populus populī populō populum populō populī populōrum populīs populōs populīs
+ 
+1 bellum bellī bellō bellum bellō bella bellōrum bellīs bella bellīs
+3rd Declension Masculine, Feminine;3rd Declension Neuter;
+2 virgō-v virginis virginī virginem virgine virginēs virginum virginibus virginēs virginibus tempus-v temporis temporī tempus tempore tempora temporum temporibus tempora temporibus
+Ille/Iste Masculine;Ille/Iste Feminine;Ille/Iste Neuter;Hic Masculine;Hic Feminine;Hic Neuter;
+6 ille illīus illī illum illō illī illōrum illīs illōs illīs illa illīus illī illam illā illae illārum illīs illās illīs illud illīus illī illud illō illa illōrum illīs illa illīs hic huius huic hunc hōc hī hōrum hīs hōs hīs haec huius huic hanc hāc hae hārum hīs hās hīs hoc huius huic hoc hōc haec hōrum hīs haec hīs
+Uter Masculine;Uter Feminine;Uter Neuter;
+3 uter utrīus utrī utrum utrō utrī utrōrum utrīs utrōs utrīs utra utrīus utrī utram utrā utrae utrārum utrīs utrās utrīs utrum utrīus utrī utrum utrō utra utrōrum utrīs utra utrīs 
+Ego/Nōs;Tū/Vōs;
+2 ego meī mihi mē mē nōs nostrum nōbīs nōs nōbīs tū tuī tibi tē tē vōs vestrum vōbīs vōs vōbīs
+Is(Masculine);Ea(Feminine);Id(Neuter);
+3 is eius eī eum eō eī eōrum eīs eōs eīs ea eius eī eam eā eae eārum eīs eās eīs id eius eī id eo ea eorum eīs ea eīs
+Īdem(Masculine);Eadem(Feminine);Idem(Neuter);
+3 īdem eiusdem eīdem eundem eōdem eīdem eōrundem eīsdem eōsdem eīsdem eadem eiusdem eīdem eandem eādem eaedem eārundem eīsdem eāsdem eīsdem idem eiusdem eīdem idem eōdem eadem eōrundem eīsdem eadem eīsdem
+1st Person;2nd Person;3rd Person;
+3 -n meī mihi mē mē -n nostrī nōbīs nōs nōbīs -n tuī tibi tē tē -n vestrī vōbīs vōs vōbīs -n suī sibi sē sē -n suī sibi sē sē
+Ipse(Masculine);Ipsa(Feminine);Ipsum(Neuter);
+3 ipse ipsīus ipsī ipsum ipsō ipsī ipsōrum ipsīs ipsōs ipsīs ipsa ipsīus ipsī ipsam ipsā ipsae ipsārum ipsīs ipsās ipsīs ipsum ipsīus ipsī ipsum ipsō ipsa ipsōrum ipsīs ipsa ipsīs
+3rd Declension i-stem (Masculine/Feminine);3rd Declension i-stem (Neuter);
+2 mors mortis mortī mortem morte mortēs mortium mortibus mortēs mortibus mare maris marī mare marī maria marium maribus maria maribus
+Masculine/Feminine;Neuter;
+2 fortis fortis fortī fortem fortī fortēs fortium fortibus fortēs fortibus forte fortis fortī forte fortī fortia fortium fortibus fortia fortibus
+Masculine;Feminine;Neuter;
+3 quī cuius cui quem quō quī quōrum quibus quōs quibus quae cuius cui quam quā quae quārum quibus quās quibus quod cuius cui quod quō quae quōrum quibus quae quibus
+Masculine;Feminine;Neuter;
+3 quis cuius cui quem quō quī quōrum quibus quōs quibus quis cuius cui quem quā quae quārum quibus quās quibus quid cuius cui cuid quō quae quōrum quibus quae quibus
+Masculine/Feminine;Neuter;
+2 metus metūs metuī metum metū metūs metuum metibus metūs metibus genū genūs genū genū genū genua genuum genibus genua genibus
+Feminine;Masculine(diēs, unique)
+2 fidēs fideī fideī fidem fidē fidēs fidērum fidēbus fidēs fidēbus diēs diēī diēī diem diē diēs diērum diēbus diēs diēbus
+Masculine/Feminine;Neuter;
+2 agēns agentis agentī agentem agentī,agente-2 agentēs agentium agentibus agentēs agentibus agēns agentis agentī agens agentī,agente-2 agentia agentium agentibus agentia agentibus
+Masculine/Feminine;Neuter;
+2 fortior fortiōris fortiōrī fortiōrem fortiōre fortiōrēs fortiōrum fortiōribus fortiōrēs fortiōribus fortius fortiōris fortiōrī fortius fortiōre fortiōra fortiōrum fortiōribus fortiōra fortiōribus
+Masculine/Feminine;Neuter;
+2 -n -n -n -n -n plūrēs plūrium plūribus plūrēs plūribus plūs plūris -n plūs plūre plūra plūrium plūribus plūra plūribus
+
+1 -n laundandī laudandō laudandum laudandō -n -n -n -n -n
+āēīōū

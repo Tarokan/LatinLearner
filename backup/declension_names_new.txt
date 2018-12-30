@@ -1,0 +1,21 @@
+﻿
+2  1st Declension (Feminine)
+3  2nd Declension Masculine
+4  2nd Declension Neuter
+7  3rd Declension
+9  Demonstratives Ille/Iste, Hic
+9  Special -īus Adjectives
+11 Personal Pronouns Ego, Tū
+11 Demonstrative Pronouns Is, Ea, Id
+11 Demonstrative Īdem, Eadem, Idem
+13 Reflexive Pronouns
+13 Intensive Pronouns
+14 3rd Declension i-stems
+16 3rd Declension Adjectives
+17 Relative Pronouns/Interrogative Adjectives
+19 Interrogative Pronouns
+20 4th Declension
+22 5th Declension
+23 Present Active Participle
+26 Comparatives
+27 The Irregular Plūs

@@ -1,0 +1,60 @@
+﻿
+1st Conjugation: Present;2nd Conjugation: Present;
+laudō, laudāre, laudāvī, laudātum;moneō, monēre, monuī, monitum;
+2 laudō laudās laudat laudāmus laudātis laudant moneō monēs monet monēmus monētis monent
+Sum Present;
+sum, esse, fuī, futūrum
+1 sum es est sumus estis sunt
+1st Conjugation: Future;1st Conjugation: Imperfect;2nd Conjugation: Future;2nd Conjugation: Imperfect
+amō, amāre, amāvī, amātum;amō, amāre, amāvī, amātum;dēbeō, dēbēre, dēbuī, dēbitum;dēbeō, dēbēre, dēbuī, dēbitum;
+4 amābō amābis amābit amābimus amābitis amābunt amābam amābās amābat amābāmus amābātis amābant debēbō debēbis debēbit debēbimus debēbitis debēbunt debēbam debēbās debēbat debēbāmus debēbātis debēbant
+Sum: Future;Sum: Imperfect;Possum: Present;Possum: Future;Possum: Imperfect
+sum, esse, fuī, futūrum;sum, esse, fuī, futūrum;possum, posse, potuī;possum, posse, potuī;possum, posse, potuī;
+5 erō eris erit erimus eritis erunt eram erās erat erāmus erātis erant possum potes potest possumus potestis possunt poterō poteris poterit poterimus poteritis poterunt poteram poterās poterat poterāmus poterātis poterant
+3rd Conjugation: Present;3rd Conjugation: Future;3rd Conjugation: Imperfect;
+gerō, gerere, gessī, gestum;gerō, gerere, gessī, gestum;gerō, gerere, gessī, gestum;
+3 gerō geris gerit gerimus geritis gerunt geram gerēs geret gerēmus gerētis gerent gerēbam gerēbās gerēbat gerēbāmus gerēbātis gerēbant
+4th Conjugation: Present;4th Conjugation: Future;4th Conjugation: Imperfect;3rd -iō: Present;3rd -iō: Future;3rd -iō: Imperfect;
+veniō, venīre, vēnī, ventum;veniō, venīre, vēnī, ventum;veniō, venīre, vēnī, ventum;fugiō, fugere, fūgī, fugitūrum;fugiō, fugere, fūgī, fugitūrum;fugiō, fugere, fūgī, fugitūrum;
+6 veniō venīs venit venīmus venītis veniunt veniam veniēs veniet veniēmus veniētis venient veniēbam veniēbās veniēbat veniēbāmus veniēbātis veniēbant fugiō fugis fugit fugimus fugitis fugiunt fugiam fugiēs fugiet fugiēmus fugiētis fugient fugiēbam fugiēbās fugiēbat fugiēbāmus fugiēbātis fugiēbant
+Perfect Active Indicative;Pluperfect Active Indicative;Future Perfect Active Indicative;
+cadō, cadere, cecidī, cāsūrum;cadō, cadere, cecidī, cāsūrum;cadō, cadere, cecidī, cāsūrum;
+3 cecidī cecidistī cecidit cecidimus cecidistis cecidērunt/cecidēre-2 cecideram ceciderās ceciderat ceciderāmus ceciderātis ceciderant ceciderō cecideris ceciderit ceciderimus cecideritis ceciderint
+1st Conjugation: Present Indicative Passive;1st Conjugation: Imperfect Indicative Passive;1st Conjugation: Future Indicative Passive;2nd Conjugation: Present Indicative Passive;2nd Conjugation: Imperfect Indicative Passive;2nd Conjugation: Future Indicative Passive;
+servō, servāre, servāvī, servātum;servō, servāre, servāvī, servātum;servō, servāre, servāvī, servātum;doceō, docēre, docuī, doctum;doceō, docēre, docuī, doctum;doceō, docēre, docuī, doctum;
+6 servor servāris servātur servāmur servāminī servantur servābar servābāris servābātur servābāmur servābāminī servābantur servābor servāberis servābitur servābimur servābiminī servābuntur doceor docēris docētur docēmur docēminī docentur docēbar docēbāris docēbātur docēbāmur docēbāminī docēbantur docēbor docēberis docēbitur docēbimur docēbiminī docēbuntur
+3rd Conjugation: Present Indicative Passive;3rd Conjugation: Future Indicative Passive;3rd Conjugation: Imperfect Indicative Passive;4th Conjugation: Present Indicative Passive;4th Conjugation: Future Indicative Passive;4th Conjugation: Imperfect Indicative Passive;
+rapiō, rapere, rapuī, raptum;rapiō, rapere, rapuī, raptum;rapiō, rapere, rapuī, raptum;sciō, scīre, scīvī, scītum;sciō, scīre, scīvī, scītum;sciō, scīre, scīvī, scītum;
+6 rapior raperis rapitur rapimur rapiminī rapiuntur rapiar rapiēris rapiētur rapiēmur rapiēminī rapientur rapiēbar rapiēbāris rapiēbātur rapiēbāmur rapiēbāminī rapiēbantur scior scīris scītur scīmur scīminī sciuntur sciar sciēris sciētur sciēmur sciēminī scientur sciēbar sciēbāris sciēbātur sciēbāmur sciēbāminī sciēbantur
+1st Conjugation: Present Subjunctive;2nd Conjugation: Present Subjunctive;3rd Conjugation: Present Subjunctive;4th Conjugation: Present Subjunctive;3rd Conjugation -iō: Present Subjunctive;
+negō, negāre, negāvī, negātum; rīdeō, rīdēre, rīsī, rīsum;crēdō, crēdere, crēdidī, crēditum;nesciō, nescīre, nescīvī, nescītum;capiō, capere, cēpī, captum;
+5 negem negēs neget negēmus negētis negent rīdeam rīdeās rīdeat rīdeāmus rīdeātis rīdeant crēdam crēdās crēdat crēdāmus crēdātis crēdant nesciam nesciās nesciat nesciāmus nesciātis nesciant capiam capiās capiat capiāmus capiātis capiant
+1st Conjugation: Imperfect Subjunctive;2nd Conjugation: Imperfect Subjunctive;3rd Conjugation: Imperfect Subjunctive;4th Conjugation: Imperfect Subjunctive;3rd Conjugation -iō: Imperfect Subjunctive;
+vocō, vocāre, vocāvī, vocātum;habeō, habēre, habuī, habitum;vincō, vincere, vīcī, victum;audiō, audīre, audīvī, audītum;faciō, facere, fēcī, factum;
+5 vocārem vocārēs vocāret vocārēmus vocārētis vocārent habērem habērēs habēret habērēmus habērētis habērent vincerem vincerēs vinceret vincerēmus vincerētis vincerent audīrem audīrēs audīret audīrēmus audīrētis audīrent facerem facerēs faceret facerēmus facerētis facerent
+Sum: Present Subjunctive;Sum: Imperfect Subjunctive;Possum: Present Subjunctive;Possum: Imperfect Subjunctive;
+sum, esse, fuī, futūrum;possum posse potuī;
+4 sim sīs sit sīmus sītis sint essem essēs esset essēmus essētis essent possim possīs possit possīmus possītis possint possem possēs posset possēmus possētis possent
+All Conjugations: Perfect Subjunctive Active;All Conjugations: Pluperfect Subjunctive Active;
+iuvō, iuvāre, iūvī, iūtum;iuvō, iuvāre, iūvī, iūtum;
+2 iūverim iūveris iūverit iūverimus iūveritis iūverint iūvissem iūvissēs iūvisset iūvissēmus iūvissētis iūvissent
+Ferō: Present Indicative Active;Ferō: Present Indicative Passive
+ferō, ferre, tulī, lātum;ferō, ferre, tulī, lātum;
+2 ferō fers fert ferimus fertis ferunt  feror ferris fertur ferimur feriminī feruntur
+Volō: Present Indicative;Volō: Present Subjunctive;Volō: Imperfect Subjunctive;
+volō, velle, voluī;volō, velle, voluī;volō, velle, voluī;
+3 volō vīs vult volumus vultis volunt velim velīs velit velīmus velītis velint vellem vellēs vellet vellēmus vellētis vellent
+Nōlō: Present Indicative;Mālō: Present Indicative;
+nōlō, nōlle, nōluī;mālō, mālle, māluī;
+2 nōlō nōn!vīs nōn!vult nōlumus nōn!vultis nōlunt mālō māvī māvult mālumus māvultis mālunt
+Patior: Present Indicative;Patior: Present Subjunctive;
+patior, patī, passus;patior, patī, passus;
+2 patior pateris patitur patimur patiminī patiuntur patiar patiāris patiātur patiāmur patiāminī patiantur
+Fiō: Present Indicative;Fiō: Imperfect Indicative;Fiō: Future Indicative;Fiō: Present Subjunctive;Fiō: Imperfect Subjunctive;
+fiō, fierī, factum sum;fiō, fierī, factum sum;fiō, fierī, factum sum;fiō, fierī, factum sum;fiō, fierī, factum sum;
+5 fīō fīs fit fīmus fītis fīunt fīēbam fīēbās fīēbat fīēbāmus fīēbātis fīēbant fīam fīēs fīet fīēmus fīētis fīent fīam fīās fīat fīāmus fīātis fīant fierem fierēs fieret fierēmus fierētis fierent
+Eō: Present Indicative;Eō: Imperfect Indicative;Eō: Future Indicative;Eō: Perfect Indicative;Eō: Pluperfect Indicative;Eō: Future Perfect Indicative;Eō: Present Subjunctive;Eō: Imperfect Subjunctive;Eō: Perfect Subjunctive;Eō: Pluperfect Subjunctive;
+eō, īre, iī, itum;eō, īre, iī, itum;eō, īre, iī, itum;eō, īre, iī, itum;eō, īre, iī, itum;eō, īre, iī, itum;eō, īre, iī, itum;eō, īre, iī, itum;eō, īre, iī, itum;eō, īre, iī, itum;
+10 eō īs it īmus ītis eunt ībam ībās ībat ībāmus ībātis ībant ībō ībis ībit ībimus ībitis ībunt iī īstī iit iimus īstis iērunt ieram ierās ierat ierāmus ierātis ierant ierō ieris ierit ierimus ieritis ierint eam eās eat eāmus eātis eant īrem īrēs īret īrēmus īrētis īrent ierim ieris ierit ierimus ieritis ierint īssem īssēs īsset īssēmus īssētis īssent
+
+āēīōū  

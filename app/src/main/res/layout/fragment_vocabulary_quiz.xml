@@ -1,0 +1,165 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+              android:orientation="vertical"
+                tools:context="com.nickisai.android.latinlearner.VocabularyQuizFragment"
+              android:gravity="center"
+              android:background="#fffff69b"
+              android:focusableInTouchMode="false"
+              android:id="@+id/quizBackground">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:id="@+id/vocab_quiz_step1">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="n/a"
+        android:id="@+id/ProgressText"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"/>
+
+    <LinearLayout
+        tools:context="com.nickisai.android.latinlearner.VocabularyQuizFragment"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="n/a"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="32sp"
+            android:id="@+id/QuizWord"
+            android:visibility="visible"
+            android:paddingBottom="6dp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/userGuess"
+                android:inputType="text"
+                android:hint="@string/vocab_quiz_hint"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                />
+
+            <Button
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="69dp"
+                android:layout_height="match_parent"
+                android:text="PASS"
+                android:id="@+id/passButton"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fullSolution"
+            android:layout_gravity="center_horizontal"
+            android:singleLine="false"
+            android:visibility="invisible"/>
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:id="@+id/vocab_quiz_step2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+            android:text="@string/vocab_quiz_result"
+            android:id="@+id/textView2"
+            android:gravity="center_horizontal"
+            android:textSize="40sp"
+            android:paddingBottom="8dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/scoreText"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/vocab_quiz_missed_words"
+                android:id="@+id/resultTextView"
+                android:gravity="center"
+                android:paddingBottom="8dp"/>
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:id="@android:id/list"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vocab_quiz_study_missed_words"
+                    android:id="@+id/studyAgainButton"
+                    android:gravity="center"
+                    style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vocab_quiz_continue"
+                    android:id="@+id/returnButton"
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

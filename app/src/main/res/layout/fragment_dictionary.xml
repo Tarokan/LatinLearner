@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+              android:orientation="vertical"
+             tools:context="com.nickisai.android.latinlearner.DictionaryFragment"
+              android:id="@+id/dictBackground"
+              android:background="@mipmap/ahasdf">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4sp"
+        android:background="#31aaaaaa">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchEditText"
+            android:layout_weight="1"
+            android:hint="@string/dicthint"
+            android:textColor="@android:color/white"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toEnglish"
+            android:id="@+id/toEnglishRadio"
+            android:layout_weight="0"
+            android:textColor="@android:color/white"
+            style="@style/Base.Widget.AppCompat.CompoundButton.RadioButton"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toLatin"
+            android:id="@+id/toLatinRadio"
+            android:layout_weight="0"
+            android:layout_marginRight="2sp"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@android:id/list"
+        />
+</LinearLayout>

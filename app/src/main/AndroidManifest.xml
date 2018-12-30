@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    package="com.nickisai.android.latinlearner" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/img_thing"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        <activity
+            android:name=".MainMenu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".VocabularySelectionActivity"
+            android:label="@string/title_activity_vocabulary_selection"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nickisai.android.latinlearner.MainMenu" />
+        </activity>
+        <activity
+            android:name=".VocabularyQuizActivity"
+            android:label="@string/title_activity_vocabulary_quiz"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+        <activity
+            android:name=".DeclensionSelectionActivity"
+            android:parentActivityName=".MainMenu" >
+        </activity>
+        <activity
+            android:name=".DeclensionQuizActivity"
+            android:label="@string/title_activity_declension_quiz"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nickisai.android.latinlearner.MainMenu" />
+        </activity>
+        <activity
+            android:name=".ConjugationQuizActivity"
+            android:label="@string/title_activity_conjugation_quiz"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity
+            android:name=".DictionaryActivity"
+            android:label="@string/title_activity_dictionary"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nickisai.android.latinlearner.MainMenu" />
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nickisai.android.latinlearner.MainMenu" />
+        </activity>
+    </application>
+
+</manifest>
