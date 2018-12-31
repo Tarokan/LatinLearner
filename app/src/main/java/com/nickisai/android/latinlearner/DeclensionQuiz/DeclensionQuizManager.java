@@ -1,4 +1,4 @@
-package com.nickisai.android.latinlearner;
+package com.nickisai.android.latinlearner.DeclensionQuiz;
 
 import android.util.Log;
 

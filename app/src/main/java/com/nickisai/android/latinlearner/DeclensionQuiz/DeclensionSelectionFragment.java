@@ -1,4 +1,4 @@
-package com.nickisai.android.latinlearner;
+package com.nickisai.android.latinlearner.DeclensionQuiz;
 
 import android.app.ListFragment;
 import android.content.Intent;
@@ -11,6 +11,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.nickisai.android.latinlearner.ConjugationQuizActivity;
+import com.nickisai.android.latinlearner.ConjugationQuizFragment;
+import com.nickisai.android.latinlearner.R;
+import com.nickisai.android.latinlearner.ResourceLoader;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -46,8 +51,6 @@ public class DeclensionSelectionFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.list_item_empty, parent, false);
 
-        ListView listView = (ListView)v.findViewById(android.R.id.list);
-
         mTitle = (TextView)v.findViewById(R.id.selectionTitle);
         mTitle.setText(R.string.declension_selection);
 
@@ -73,8 +76,6 @@ public class DeclensionSelectionFragment extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        int declension = position + 1;
-        //i.putExtra(DeclensionQuizFragment.EXTRA_DECLENSION, declension);
         Intent i;
         if(mDeclensions.get(position).contains("-v")) {
             Log.e(TAG, "launched Conjugation");
@@ -98,7 +99,6 @@ public class DeclensionSelectionFragment extends ListFragment {
             if (convertView == null) {
                 convertView = getActivity().getLayoutInflater().inflate(R.layout.list_item_declension, null);
             }
-            // configure the view for this crime
             String c = getItem(position);
 
             TextView titleTextView = (TextView)convertView.findViewById(R.id.declension);

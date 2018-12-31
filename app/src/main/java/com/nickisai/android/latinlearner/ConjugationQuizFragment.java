@@ -243,7 +243,6 @@ public class ConjugationQuizFragment extends Fragment {
                 mTextFields.get(i).setTextColor(0xFFCDC57D);
                 mCQM.setDeclensionSolved(i, quizNumber);
             }
-            //setTextListener(i);
         }
         mBaseTextView.setText(mCQM.getBase(quizNumber));
         mGiveUpButton.setEnabled(true);

@@ -1,16 +1,17 @@
 package com.nickisai.android.latinlearner;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.nickisai.android.latinlearner.DeclensionQuiz.DeclensionSelectionActivity;
 
-public class MainMenu extends AppCompatActivity {
+public class MainMenu extends Activity {
 
     private Button mDeclConjButton;
     private Button mDictionaryButton;

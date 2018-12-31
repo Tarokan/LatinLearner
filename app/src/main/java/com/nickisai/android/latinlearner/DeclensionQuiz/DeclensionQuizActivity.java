@@ -1,4 +1,4 @@
-package com.nickisai.android.latinlearner;
+package com.nickisai.android.latinlearner.DeclensionQuiz;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -6,6 +6,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.nickisai.android.latinlearner.R;
 
 
 public class DeclensionQuizActivity extends ActionBarActivity {

@@ -18,6 +18,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
+import com.nickisai.android.latinlearner.UIElements.LatinTextWatcher;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -28,7 +30,6 @@ import java.util.ArrayList;
 public class VocabularyQuizFragment extends ListFragment {
 
     private EditText mGuessField;
-    private String userGuess;
     private TextView mQuizWord;
     private TextView mFullSolution;
     private TextView mProgressText;
@@ -50,7 +51,6 @@ public class VocabularyQuizFragment extends ListFragment {
     public VocabularyQuizFragment() {
     }
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +61,7 @@ public class VocabularyQuizFragment extends ListFragment {
 
         mQM = null;
         try {
-            resourceLoader.processData(chapter);
+            resourceLoader.populateWordsFromChapter(chapter);
             Log.e(TAG, "Loaded latin terms..?");
 
             mQM = new QuizManager(resourceLoader.getLatinWords(), resourceLoader
@@ -124,73 +124,55 @@ public class VocabularyQuizFragment extends ListFragment {
         });
 
         mGuessField = (EditText)v.findViewById(R.id.userGuess);
-        mGuessField.addTextChangedListener(new TextWatcher() {
+        mGuessField.addTextChangedListener(new LatinTextWatcher(mGuessField) {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                userGuess = s.toString();
-                Log.e(TAG, "USer typed");
-                if(mQM.isWasCorrect() == false) {
-                    Log.e(TAG, "Checking...");
-                    if(mQM.isCorrect(userGuess)) {
-                        correctQuestion();
-                        Log.e(TAG, "Guess was Correct");
-                    }
+            public void onTextChangedAfterConversion(String s) {
+                if(mQM.isCorrect(s)) {
+                    correctQuestion();
+                    Log.i(TAG, "Guess was Correct");
                 }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
             }
         });
 
-        if(mQM.isCompleted() == true) {
+        if(mQM.isCompleted()) {
             switchQuestion();
         }
 
+        mLinearLayoutStep1.setVisibility(View.VISIBLE);
+        mLinearLayoutStep2.setVisibility(View.INVISIBLE);
+
         return v;
     }
-
-
 
     private void correctQuestion() {
         mFrameLayout.setBackgroundColor(0xFF2FFF3F);
         mFullSolution.setVisibility(View.VISIBLE);
         mButton.setEnabled(false);
-        int i = 250 + 500 * mQM.getNumberOfKeywords();
+        int i = 500 + 500 * mQM.getNumberOfKeywords();
         new CountDownTimer(i, 250) {
             public void onFinish() {
                 mFrameLayout.setBackgroundColor(0xFFFFFC98);
                 mFullSolution.setVisibility(View.INVISIBLE);
                 switchQuestion();
                 mButton.setEnabled(true);
-                if(!mQM.isCompleted()) {
-                    //Log.e(TAG, "mQM.isWasCorrect() is set to false");
-                    //mQM.isWasCorrect() = false;
-                }
             }
 
-            public void onTick(long millisUntilFinished) {
-                // millisUntilFinished    The amount of time until finished.
-            }
+            public void onTick(long millisUntilFinished) { }
         }.start();
     }
 
     private void switchQuestion() {
-        Log.e(TAG, "Quiz Manager completed?" + mQM.isCompleted());
-        Log.e(TAG, "Last Question correct?" + mQM.isWasCorrect());
-        if(mQM.isCompleted() == false) {
+        Log.i(TAG, "Quiz Manager completed?" + mQM.isCompleted());
+        Log.i(TAG, "Last Question correct?" + mQM.isWasCorrect());
+        if(!mQM.isCompleted()) {
             mQM.setNewQuestion();
-            mGuessField.clearComposingText();
 
             mQuizWord.setText(mQM.getLatinWord());
             mGuessField.setText("");
-            mProgressText.setText("" + (mQM.getQuestionsAnswered() + 1) + " of " + mQM.getLength());
+
+            String progress = getString(R.string.vocab_quiz_progress, mQM.getQuestionsAnswered(), mQM.getLength());
+            mProgressText.setText(progress);
+
             mFullSolution.setText(mQM.getEnglishTranslation());
         } else {
             mGuessField.clearComposingText();
@@ -210,16 +192,20 @@ public class VocabularyQuizFragment extends ListFragment {
             } else if(correctlyAnswered > 0) {
                 mResultsComment.setText("Ouch.  Let's see what you missed:");
             } else {
-                mResultsComment.setText("Were you even trying?");
+                mResultsComment.setText("Let's study some more.");
             }
         }
     }
 
     private void resetFragment() {
         mQM = new QuizManager(mQM.getMissedLatinWords(), mQM.getMissedDefinitions());
+
         mQuizWord.setText(mQM.getLatinWord());
         mGuessField.setText("");
-        mProgressText.setText("" + (mQM.getQuestionsAnswered() + 1) + " of " + mQM.getLength());
+
+        String progress = getString(R.string.vocab_quiz_progress, mQM.getQuestionsAnswered(), mQM.getLength());
+        mProgressText.setText(progress);
+
         mFullSolution.setText(mQM.getEnglishTranslation());
 
         mLinearLayoutStep1.setVisibility(View.VISIBLE);

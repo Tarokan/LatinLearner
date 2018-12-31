@@ -28,16 +28,15 @@ public class QuizManager {
     ArrayList<String> missedLatinWords = new ArrayList<String>();
     ArrayList<String> missedDefinitions = new ArrayList<String>();
     ArrayList<String> keywords = new ArrayList<String>();
-    private static final String TAG = "huh?";
+    private static final String TAG = QuizManager.class.getCanonicalName();
 
     public int getQuestionsAnswered() {
         return mQuestionsAnswered;
     }
 
-
-
     public QuizManager(ArrayList<String> latinData, ArrayList<String>
             englishData) {
+        Log.d(TAG, "" + latinData.size());
         mLatinData = latinData;
         mEnglishData = englishData;
         mRandom = new Random(System.currentTimeMillis());

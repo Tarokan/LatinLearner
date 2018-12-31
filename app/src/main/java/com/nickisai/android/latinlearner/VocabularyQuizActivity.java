@@ -1,17 +1,14 @@
 package com.nickisai.android.latinlearner;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.net.URI;
-import java.util.UUID;
 
-
-public class VocabularyQuizActivity extends ActionBarActivity {
+public class VocabularyQuizActivity extends Activity {
 
     protected Fragment createFragment() {
         return new VocabularyQuizFragment();

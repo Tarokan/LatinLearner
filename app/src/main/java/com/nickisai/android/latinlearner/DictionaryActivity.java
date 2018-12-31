@@ -1,13 +1,13 @@
 package com.nickisai.android.latinlearner;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class DictionaryActivity extends ActionBarActivity {
+public class DictionaryActivity extends Activity {
 
     protected  Fragment createFragment() {
         return new DictionaryFragment();

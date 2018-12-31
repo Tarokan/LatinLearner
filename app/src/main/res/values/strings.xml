@@ -22,10 +22,11 @@
     <string name="vocab_quiz_hint">Enter the translation…</string>
     <string name="vocab_quiz_result">Results</string>
     <string name="vocab_quiz_continue">Return</string>
-    <string name="vocab_quiz_missed_words">Scrub missed so many words:</string>
+    <string name="vocab_quiz_missed_words">You missed these words:</string>
     <string name="vocab_quiz_study_missed_words">Study Missed Terms</string>
     <string name="title_activity_declension_quiz">DeclensionQuizActivity</string>
-
+    <string name="vocab_quiz_progress">%1$d of %2$d</string>
+    <string name="vocab_quiz_mistakes"><b></b></string>
 
     <string name="declSgNom">Sg. Nominative</string>
     <string name="declSgGen">Sg. Genitive</string>

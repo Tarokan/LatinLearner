@@ -9,12 +9,12 @@ import java.util.Scanner;
  * Created by Nicholas on 8/2/2015.
  */
 public class ConjugationQuizManager {
-    private ArrayList<String> declensions = new ArrayList<String>();
+    private ArrayList<String> declensions = new ArrayList<>();
     private int[] corrects;
     private int quizNumbers;
     private static final String TAG = "ConjQuizMan";
-    private ArrayList<String> titles = new ArrayList<String>();
-    private ArrayList<String> bases = new ArrayList<String>();
+    private ArrayList<String> titles = new ArrayList<>();
+    private ArrayList<String> bases = new ArrayList<>();
 
     public ConjugationQuizManager(String rawConjugationData, String rawBases, String
             rawConjugationTitle) {
@@ -87,11 +87,7 @@ public class ConjugationQuizManager {
 
     public boolean checkDeclension(int caseNumber, String guess, int currentQuiz) {
         String answer;
-        //       if (base != null) {
-        //            answer = base + declensions.get(caseNumber - 1);
-        //       } else {
         answer = declensions.get(caseNumber + ((currentQuiz-1)*6));
-        //       }
         guess = latinize(guess);
         if(guess.contains(" ")) {
             guess = guess.replace(' ','!');

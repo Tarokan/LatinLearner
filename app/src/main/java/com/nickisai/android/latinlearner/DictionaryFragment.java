@@ -13,7 +13,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import java.io.IOException;
+import com.nickisai.android.latinlearner.UIElements.LatinTextWatcher;
+
 import java.util.ArrayList;
 
 /**
@@ -21,20 +22,17 @@ import java.util.ArrayList;
  */
 public class DictionaryFragment extends ListFragment {
 
-    //debugging purposes
-    private static final String TAG = "dictFrag";
+    private static final String TAG = DictionaryFragment.class.getCanonicalName();
 
-    //UI elements
     private EditText mSearchEditText;
     private RadioButton mLatinRadio, mEnglishRadio;
     private ArrayList<String> mAllTermsEnglish, mPossibleTermsEnglish, mAllTermsLatin,
             mPossibleTermsLatin;
 
-    private String term = "";
+    private String searchTerm = "";
     private termsAdapter adapter;
 
     public DictionaryFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -44,49 +42,23 @@ public class DictionaryFragment extends ListFragment {
         ResourceLoader resourceLoader = new ResourceLoader(R.raw.dict, getActivity());
 
         //load dictionary files
-        try {
-            resourceLoader.processDataforDictionary();
-            mAllTermsEnglish = resourceLoader.getEnglishWords();
-            mAllTermsLatin = resourceLoader.getLatinWords();
-            Log.e(TAG, mAllTermsEnglish.get(1));
-            Log.e(TAG, mAllTermsLatin.get(1));
-        } catch (IOException e) {
-            Log.e(TAG, "Missing dictionary files.");
-        }
+        resourceLoader.populateAllWords();
+        mAllTermsEnglish = resourceLoader.getEnglishWords();
+        mAllTermsLatin = resourceLoader.getLatinWords();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_dictionary, container, false);
-        mPossibleTermsLatin = (ArrayList<String>) mAllTermsLatin.clone();
-        mPossibleTermsEnglish = (ArrayList<String>) mAllTermsEnglish.clone();
+
+        getMatches("");
 
         mSearchEditText = (EditText) v.findViewById(R.id.searchEditText);
-        mSearchEditText.setHintTextColor(0xffffffff);
-        mSearchEditText.addTextChangedListener(new TextWatcher() {
+        mSearchEditText.addTextChangedListener(new LatinTextWatcher(mSearchEditText) {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (!s.toString().equals(latinize(s.toString()))) {
-                    Log.e(TAG, "capital letter detected");
-                    term = latinize(s.toString());
-                    mSearchEditText.setText(term);
-                    mSearchEditText.setSelection(mSearchEditText.getText()
-                            .length());
-                } else if (!s.toString().equals("")) {
-                    term = s.toString();
-                    getMatches(term);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
+            public void onTextChangedAfterConversion(String s) {
+                getMatches(s);
             }
         });
 
@@ -101,8 +73,8 @@ public class DictionaryFragment extends ListFragment {
             public void onClick(View v) {
                 mLatinRadio.setChecked(true);
                 mEnglishRadio.setChecked(false);
-                if (!term.equals("")) {
-                    getMatches(term);
+                if (!searchTerm.equals("")) {
+                    getMatches(searchTerm);
                 }
             }
         });
@@ -113,8 +85,8 @@ public class DictionaryFragment extends ListFragment {
                 mEnglishRadio.setChecked(true);
                 mLatinRadio.setChecked(false);
 
-                if (!term.equals("")) {
-                    getMatches(term);
+                if (!searchTerm.equals("")) {
+                    getMatches(searchTerm);
                 }
             }
         });
@@ -142,47 +114,49 @@ public class DictionaryFragment extends ListFragment {
     }
 
     //retrieves words with similar spelling
-    public ArrayList<String> getMatches(String givenTerm) {
-        mPossibleTermsLatin.clear();
-        mPossibleTermsEnglish.clear();
-        if (mEnglishRadio.isChecked()) {
-            //converting to english
-            Log.e(TAG, "searching");
-            for (int i = 0; i < mAllTermsLatin.size(); i++) {
-                final String term = mAllTermsLatin.get(i);
-                if (term.contains(givenTerm)) {
-                    if (term.charAt(0) == givenTerm.charAt(0)) {
-                        mPossibleTermsLatin.add(0, term);
-                        mPossibleTermsEnglish.add(0, mAllTermsEnglish.get(i));
+    public void getMatches(String givenTerm) {
 
-                    } else {
-                        mPossibleTermsLatin.add(term);
-                        mPossibleTermsEnglish.add(mAllTermsEnglish.get(i));
+        if (givenTerm.isEmpty()) {
+            mPossibleTermsLatin = (ArrayList<String>) mAllTermsLatin.clone();
+            mPossibleTermsEnglish = (ArrayList<String>) mAllTermsEnglish.clone();
+        } else {
+            mPossibleTermsLatin.clear();
+            mPossibleTermsEnglish.clear();
+            if (mLatinRadio.isChecked()) {
+                //converting to english
+                for (int i = 0; i < mAllTermsLatin.size(); i++) {
+                    final String term = mAllTermsLatin.get(i);
+                    if (term.contains(givenTerm)) {
+                        if (term.charAt(0) == givenTerm.charAt(0)) {
+                            mPossibleTermsLatin.add(0, term);
+                            mPossibleTermsEnglish.add(0, mAllTermsEnglish.get(i));
+
+                        } else {
+                            mPossibleTermsLatin.add(term);
+                            mPossibleTermsEnglish.add(mAllTermsEnglish.get(i));
+                        }
+                    }
+                }
+                Log.i(TAG, "" + mPossibleTermsEnglish.size());
+                Log.i(TAG, "" + mPossibleTermsLatin.size());
+            } else if (mEnglishRadio.isChecked()) {
+                for (int i = 0; i < mAllTermsEnglish.size(); i++) {
+                    String term = mAllTermsEnglish.get(i);
+                    if (term.contains(givenTerm)) {
+                        if (term.charAt(0) == givenTerm.charAt(0)) {
+                            mPossibleTermsLatin.add(0, mAllTermsLatin.get(i));
+                            mPossibleTermsEnglish.add(0, term);
+
+                        } else {
+                            mPossibleTermsLatin.add(mAllTermsLatin.get(i));
+                            mPossibleTermsEnglish.add(term);
+                        }
                     }
                 }
             }
-            adapter = new termsAdapter(mPossibleTermsEnglish, mPossibleTermsLatin);
-            setListAdapter(adapter);
         }
-        Log.e(TAG, "" + mAllTermsEnglish.size());
-        if (mLatinRadio.isChecked()) {
-            for (int i = 0; i < mAllTermsEnglish.size(); i++) {
-                String term = mAllTermsEnglish.get(i);
-                if (term.contains(givenTerm)) {
-                    if (term.charAt(0) == givenTerm.charAt(0)) {
-                        mPossibleTermsLatin.add(0, mAllTermsLatin.get(i));
-                        mPossibleTermsEnglish.add(0, term);
-
-                    } else {
-                        mPossibleTermsLatin.add(mAllTermsLatin.get(i));
-                        mPossibleTermsEnglish.add(term);
-                    }
-                }
-            }
-            adapter = new termsAdapter(mPossibleTermsEnglish, mPossibleTermsLatin);
-            setListAdapter(adapter);
-        }
-        return null;
+        adapter = new termsAdapter(mPossibleTermsEnglish, mPossibleTermsLatin);
+        setListAdapter(adapter);
     }
 
     //replaces the user-input capital letters with the corresponding macron letters

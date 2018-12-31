@@ -22,6 +22,8 @@
             android:id="@+id/searchEditText"
             android:layout_weight="1"
             android:hint="@string/dicthint"
+            android:inputType="text|textEmailAddress"
+            android:textColorHint="@android:color/white"
             android:textColor="@android:color/white"/>
 
         <RadioButton
