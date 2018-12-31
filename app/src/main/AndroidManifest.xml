@@ -32,11 +32,11 @@
             android:windowSoftInputMode="stateVisible|adjustResize" >
         </activity>
         <activity
-            android:name=".DeclensionQuiz.DeclensionSelectionActivity"
+            android:name=".ConjugationAndDeclension.DeclensionSelectionActivity"
             android:parentActivityName=".MainMenu" >
         </activity>
         <activity
-            android:name=".DeclensionQuiz.DeclensionQuizActivity"
+            android:name=".ConjugationAndDeclension.DeclensionQuizActivity"
             android:label="@string/title_activity_declension_quiz"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateVisible|adjustResize" >
@@ -45,7 +45,7 @@
                 android:value="com.nickisai.android.latinlearner.MainMenu" />
         </activity>
         <activity
-            android:name=".ConjugationQuizActivity"
+            android:name=".ConjugationAndDeclension.ConjugationQuizActivity"
             android:label="@string/title_activity_conjugation_quiz"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateVisible|adjustResize"/>

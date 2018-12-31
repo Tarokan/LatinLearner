@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.nickisai.android.latinlearner.DeclensionQuiz.DeclensionSelectionActivity;
+import com.nickisai.android.latinlearner.ConjugationAndDeclension.DeclensionSelectionActivity;
 
 public class MainMenu extends Activity {
 

@@ -1,4 +1,4 @@
-package com.nickisai.android.latinlearner.DeclensionQuiz;
+package com.nickisai.android.latinlearner.ConjugationAndDeclension;
 
 import android.app.Activity;
 import android.app.Fragment;

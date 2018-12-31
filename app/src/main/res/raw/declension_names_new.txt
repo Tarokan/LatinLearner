@@ -21,7 +21,6 @@
 16 13 3rd Declension Adjectives
 17 14 Relative Pronouns/Interrogative Adjectives
 18 8  1st/2nd Conjugations: Passive Present-v
-19 8  Perfect Passive System
 19 15 Interrogative Pronouns
 20 16 4th Declension
 21 9  3rd/4th Conjugations: Passive Present-v

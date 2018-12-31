@@ -1,19 +1,20 @@
-package com.nickisai.android.latinlearner.DeclensionQuiz;
+package com.nickisai.android.latinlearner.ConjugationAndDeclension;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import com.nickisai.android.latinlearner.R;
 
-
-public class DeclensionQuizActivity extends ActionBarActivity {
+/**
+ * Created by Nicholas on 8/10/2015.
+ */
+public class ConjugationQuizActivity extends Activity {
 
     protected Fragment createFragment() {
-        return new DeclensionQuizFragment();
+        return new ConjugationQuizFragment();
     }
 
     @Override
@@ -31,13 +32,6 @@ public class DeclensionQuizActivity extends ActionBarActivity {
         }
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_declension_quiz, menu);
-        return true;
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

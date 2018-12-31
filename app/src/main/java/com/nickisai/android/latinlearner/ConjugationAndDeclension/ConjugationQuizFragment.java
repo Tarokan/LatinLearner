@@ -1,4 +1,4 @@
-package com.nickisai.android.latinlearner;
+package com.nickisai.android.latinlearner.ConjugationAndDeclension;
 
 import android.app.AlertDialog;
 import android.app.Fragment;
@@ -13,6 +13,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.nickisai.android.latinlearner.R;
+import com.nickisai.android.latinlearner.ResourceLoader;
 
 import java.io.IOException;
 import java.util.ArrayList;

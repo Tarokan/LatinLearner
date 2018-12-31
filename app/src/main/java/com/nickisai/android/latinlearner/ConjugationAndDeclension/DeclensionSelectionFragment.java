@@ -1,8 +1,9 @@
-package com.nickisai.android.latinlearner.DeclensionQuiz;
+package com.nickisai.android.latinlearner.ConjugationAndDeclension;
 
 import android.app.ListFragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -12,8 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.nickisai.android.latinlearner.ConjugationQuizActivity;
-import com.nickisai.android.latinlearner.ConjugationQuizFragment;
 import com.nickisai.android.latinlearner.R;
 import com.nickisai.android.latinlearner.ResourceLoader;
 
@@ -39,7 +38,7 @@ public class DeclensionSelectionFragment extends ListFragment {
             mDeclensions = chapterLoader.readAsChapters();
             Log.e(TAG, "Loaded Successfully!");
         } catch (IOException e) {
-            mDeclensions = new ArrayList<String>();
+            mDeclensions = new ArrayList<>();
             Log.e(TAG, "Failed to load declension names");
         }
 
@@ -90,12 +89,13 @@ public class DeclensionSelectionFragment extends ListFragment {
     }
 
     private class DeclensionAdapter extends ArrayAdapter<String> {
-        public DeclensionAdapter(ArrayList<String> declensionNames) {
+        private DeclensionAdapter(ArrayList<String> declensionNames) {
             super(getActivity(), 0, declensionNames);
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        @NonNull
+        public View getView(int position, View convertView, @NonNull ViewGroup parent) {
             if (convertView == null) {
                 convertView = getActivity().getLayoutInflater().inflate(R.layout.list_item_declension, null);
             }
