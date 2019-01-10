@@ -1,15 +1,14 @@
 package com.nickisai.android.latinlearner;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.nickisai.android.latinlearner.ConjugationAndDeclension.DeclensionSelectionActivity;
+import com.nickisai.android.latinlearner.ConjugationAndDeclension.ConjugationAndDeclensionSelectionActivity;
 
 public class MainMenu extends Activity {
 
@@ -18,11 +17,9 @@ public class MainMenu extends Activity {
     private Button mVocabularyButton;
     private Button mAboutButton;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main_menu);
@@ -32,8 +29,7 @@ public class MainMenu extends Activity {
         mDeclConjButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainMenu.this, DeclensionSelectionActivity.class);
-                startActivity(i);
+                launchIntoMenuOption(MainMenu.this, ConjugationAndDeclensionSelectionActivity.class);
             }
         });
 
@@ -41,8 +37,7 @@ public class MainMenu extends Activity {
         mDictionaryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainMenu.this, DictionaryActivity.class);
-                startActivity(i);
+                launchIntoMenuOption(MainMenu.this, DictionaryActivity.class);
             }
         });
 
@@ -50,8 +45,7 @@ public class MainMenu extends Activity {
         mVocabularyButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainMenu.this, VocabularySelectionActivity.class);
-                startActivity(i);
+                launchIntoMenuOption(MainMenu.this, VocabularySelectionActivity.class);
             }
         });
 
@@ -59,32 +53,14 @@ public class MainMenu extends Activity {
         mAboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainMenu.this, AboutActivity.class);
-                startActivity(i);
+                launchIntoMenuOption(MainMenu.this, AboutActivity.class);
             }
         });
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    private void launchIntoMenuOption(Context context, Class targetClass) {
+        Intent intent = new Intent(context, targetClass);
+        startActivity(intent);
     }
 }

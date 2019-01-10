@@ -4,6 +4,5 @@
       tools:context=".MainMenu">
       <item android:id="@+id/action_settings"
             android:title="@string/about_settings"
-            android:orderInCategory="100"
-            app:showAsAction="never"/>
+            android:orderInCategory="100"/>
 </menu>

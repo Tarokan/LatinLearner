@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion 28
     buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "com.nickisai.android.latinlearner"
-        minSdkVersion 11
-        targetSdkVersion 23
-        versionCode 7
-        versionName "1.0.5"
+        minSdkVersion 14
+        targetSdkVersion 28
+        versionCode 8
+        versionName "1.1.0"
     }
     buildTypes {
         release {
@@ -22,5 +22,5 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'com.android.support:appcompat-v7:28.0.0'
 }

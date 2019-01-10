@@ -1,8 +1,8 @@
 package com.nickisai.android.latinlearner.ConjugationAndDeclension;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import com.nickisai.android.latinlearner.R;
 
 
-public class DeclensionQuizActivity extends ActionBarActivity {
+public class DeclensionQuizActivity extends Activity {
 
     protected Fragment createFragment() {
         return new DeclensionQuizFragment();

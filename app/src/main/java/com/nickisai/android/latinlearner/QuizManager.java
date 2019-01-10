@@ -10,24 +10,20 @@ import java.util.Scanner;
  * Created by Nicholas on 7/24/2015.
  */
 public class QuizManager {
-    public boolean isWasCorrect() {
-        return wasCorrect;
-    }
 
-    boolean wasCorrect;
-    ArrayList<String> mLatinData;
-    ArrayList<String> mEnglishData;
-    int mCurrentQuestionID;
-    int mCorrectlyAnswered;
+    private ArrayList<String> mLatinData;
+    private ArrayList<String> mEnglishData;
+    private int mCurrentQuestionID;
+    private int mCorrectlyAnswered;
     private enum questionStates {
         UNUSED, CORRECT, PASSED
     }
-    int mQuestionsAnswered;
-    questionStates[] used;
-    Random mRandom;
-    ArrayList<String> missedLatinWords = new ArrayList<String>();
-    ArrayList<String> missedDefinitions = new ArrayList<String>();
-    ArrayList<String> keywords = new ArrayList<String>();
+    private int mQuestionsAnswered;
+    private questionStates[] used;
+    private Random mRandom;
+    private ArrayList<String> missedLatinWords = new ArrayList<>();
+    private ArrayList<String> missedDefinitions = new ArrayList<>();
+    private ArrayList<String> keywords = new ArrayList<>();
     private static final String TAG = QuizManager.class.getCanonicalName();
 
     public int getQuestionsAnswered() {
@@ -36,7 +32,6 @@ public class QuizManager {
 
     public QuizManager(ArrayList<String> latinData, ArrayList<String>
             englishData) {
-        Log.d(TAG, "" + latinData.size());
         mLatinData = latinData;
         mEnglishData = englishData;
         mRandom = new Random(System.currentTimeMillis());
@@ -91,7 +86,6 @@ public class QuizManager {
         if(mContainsDefinition == true) {
             mCorrectlyAnswered++;
             used[mCurrentQuestionID] = questionStates.CORRECT;
-            wasCorrect = true;
         }
 
         return mContainsDefinition;
@@ -109,7 +103,6 @@ public class QuizManager {
                 questionStates.PASSED) {
             mCurrentQuestionID = mRandom.nextInt(mLatinData.size());
         }
-        wasCorrect = false;
         mQuestionsAnswered++;
     }
 
@@ -126,7 +119,7 @@ public class QuizManager {
         return isCompleted;
     }
 
-    public ArrayList<String> getMissedLatinWords() {
+    ArrayList<String> getMissedLatinWords() {
         return missedLatinWords;
     }
 

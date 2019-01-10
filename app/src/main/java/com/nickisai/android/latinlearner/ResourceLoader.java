@@ -157,7 +157,6 @@ public class ResourceLoader {
         try {
             InputStream in = mContext.getResources().openRawResource(resourceID);
             reader = new BufferedReader(new InputStreamReader(in));
-            //reader.readLine();
             for(int i = 0; i < (selection-1) * 2 + 1; i++) {
                 reader.readLine();
             }
@@ -180,7 +179,6 @@ public class ResourceLoader {
         try {
             InputStream in = mContext.getResources().openRawResource(resourceID);
             reader = new BufferedReader(new InputStreamReader(in));
-            //reader.readLine();
             for(int i = 0; i < (selection-1) * 3 + 1; i++) {
                 reader.readLine();
             }

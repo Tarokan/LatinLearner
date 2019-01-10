@@ -9,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/selectionTitle"
+        android:id="@+id/listTitle"
         android:textColor="#ffefebdc"
         android:textSize="30sp"
         android:background="#d7000000"
@@ -18,7 +18,7 @@
         android:paddingBottom="4dp"/>
 
     <ListView
-        android:id="@android:id/list"
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

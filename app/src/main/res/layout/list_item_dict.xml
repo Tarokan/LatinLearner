@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Large Text"
-            android:id="@+id/latinWord"
+            android:id="@+id/mainText"
             android:layout_marginLeft="2sp"
             android:textColor="#ffffff"/>
 
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
-            android:id="@+id/engWord"
+            android:id="@+id/subText"
             android:layout_marginLeft="2sp"
             android:textColor="#ffffff"/>
     </LinearLayout>

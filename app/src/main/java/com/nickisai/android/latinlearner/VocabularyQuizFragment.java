@@ -3,9 +3,8 @@ package com.nickisai.android.latinlearner;
 import android.app.ListFragment;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.text.Editable;
+import android.support.annotation.NonNull;
 import android.text.Html;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -77,19 +76,19 @@ public class VocabularyQuizFragment extends ListFragment {
         View v = inflater.inflate(R.layout.fragment_vocabulary_quiz, container, false);
         v.setSoundEffectsEnabled(true);
 
-        mQuizWord = (TextView)v.findViewById(R.id.QuizWord);
+        mQuizWord = v.findViewById(R.id.QuizWord);
         mQuizWord.setText(mQM.getLatinWord());
 
-        mScoreText = (TextView)v.findViewById(R.id.scoreText);
+        mScoreText = v.findViewById(R.id.scoreText);
 
-        mFrameLayout = (FrameLayout)v.findViewById(R.id.quizBackground);
-        mLinearLayoutStep1 = (LinearLayout)v.findViewById(R.id.vocab_quiz_step1);
-        mLinearLayoutStep2 = (LinearLayout)v.findViewById(R.id.vocab_quiz_step2);
+        mFrameLayout = v.findViewById(R.id.quizBackground);
+        mLinearLayoutStep1 = v.findViewById(R.id.vocab_quiz_step1);
+        mLinearLayoutStep2 = v.findViewById(R.id.vocab_quiz_step2);
 
-        mFullSolution = (TextView)v.findViewById(R.id.fullSolution);
+        mFullSolution = v.findViewById(R.id.fullSolution);
         mFullSolution.setText(mQM.getEnglishTranslation());
 
-        mReturnButton = (Button)v.findViewById(R.id.returnButton);
+        mReturnButton = v.findViewById(R.id.returnButton);
         mReturnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,12 +97,12 @@ public class VocabularyQuizFragment extends ListFragment {
             }
         });
 
-        mProgressText = (TextView)v.findViewById(R.id.ProgressText);
-        mProgressText.setText((mQM.getQuestionsAnswered() + 1) + " of " + mQM.getLength());
+        mProgressText = v.findViewById(R.id.ProgressText);
+        mProgressText.setText(getString(R.string.vocab_quiz_progress, mQM.getQuestionsAnswered(), mQM.getLength()));
 
-        mResultsComment = (TextView)v.findViewById(R.id.resultTextView);
+        mResultsComment = v.findViewById(R.id.resultTextView);
 
-        mStudyAgainButton = (Button)v.findViewById(R.id.studyAgainButton);
+        mStudyAgainButton = v.findViewById(R.id.studyAgainButton);
         mStudyAgainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,7 +111,7 @@ public class VocabularyQuizFragment extends ListFragment {
             }
         });
 
-        mButton = (Button)v.findViewById(R.id.passButton);
+        mButton = v.findViewById(R.id.passButton);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -123,7 +122,7 @@ public class VocabularyQuizFragment extends ListFragment {
 
         });
 
-        mGuessField = (EditText)v.findViewById(R.id.userGuess);
+        mGuessField = v.findViewById(R.id.userGuess);
         mGuessField.addTextChangedListener(new LatinTextWatcher(mGuessField) {
             @Override
             public void onTextChangedAfterConversion(String s) {
@@ -163,7 +162,6 @@ public class VocabularyQuizFragment extends ListFragment {
 
     private void switchQuestion() {
         Log.i(TAG, "Quiz Manager completed?" + mQM.isCompleted());
-        Log.i(TAG, "Last Question correct?" + mQM.isWasCorrect());
         if(!mQM.isCompleted()) {
             mQM.setNewQuestion();
 
@@ -181,18 +179,18 @@ public class VocabularyQuizFragment extends ListFragment {
 
             mistakesAdapter adapter = new mistakesAdapter(mQM.getMissedLatinWords(), mQM.getMissedDefinitions());
             setListAdapter(adapter);
-            mScoreText.setText("Score: " + mQM.getCorrectlyAnswered() + "/" + mQM.getLength());
+            mScoreText.setText(getString(R.string.vocab_score, mQM.getCorrectlyAnswered(), mQM.getLength()));
 
             float correctlyAnswered = (float)mQM.getCorrectlyAnswered() / mQM.getLength();
             if (correctlyAnswered == 1) {
                 mStudyAgainButton.setVisibility(View.INVISIBLE);
-                mResultsComment.setText("Wow! You got all of the questions right!");
+                mResultsComment.setText(getString(R.string.vocab_feedback_perfect));
             } else if(correctlyAnswered > 0.7) {
-                mResultsComment.setText("Nice Job!  Here's a few words you missed:");
+                mResultsComment.setText(getString(R.string.vocab_feedback_great));
             } else if(correctlyAnswered > 0) {
-                mResultsComment.setText("Ouch.  Let's see what you missed:");
+                mResultsComment.setText(getString(R.string.vocab_feedback_ok));
             } else {
-                mResultsComment.setText("Let's study some more.");
+                mResultsComment.setText(getString(R.string.vocab_feedback_bad));
             }
         }
     }
@@ -203,8 +201,7 @@ public class VocabularyQuizFragment extends ListFragment {
         mQuizWord.setText(mQM.getLatinWord());
         mGuessField.setText("");
 
-        String progress = getString(R.string.vocab_quiz_progress, mQM.getQuestionsAnswered(), mQM.getLength());
-        mProgressText.setText(progress);
+        mProgressText.setText(getString(R.string.vocab_quiz_progress, mQM.getQuestionsAnswered(), mQM.getLength()));
 
         mFullSolution.setText(mQM.getEnglishTranslation());
 
@@ -215,14 +212,15 @@ public class VocabularyQuizFragment extends ListFragment {
     private class mistakesAdapter extends ArrayAdapter<String> {
         private ArrayList<String> mWrongWords;
         private ArrayList<String> mDefinitions;
-        public mistakesAdapter(ArrayList<String> wrongWords, ArrayList<String> defitions) {
+        public mistakesAdapter(ArrayList<String> wrongWords, ArrayList<String> definitions) {
             super(getActivity(), 0, wrongWords);
             mWrongWords = wrongWords;
-            mDefinitions = defitions;
+            mDefinitions = definitions;
         }
 
+        @NonNull
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(int position, View convertView, @NonNull ViewGroup parent) {
             if (convertView == null) {
                 convertView = getActivity().getLayoutInflater().inflate(R.layout.list_item_vocab, null);
             }
